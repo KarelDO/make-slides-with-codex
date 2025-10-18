@@ -1,0 +1,25 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+env/
+venv/
+build/
+dist/
+*.egg-info/
+
+# Typst and slides
+*.pdf
+*.png
+typslides/**/thumbs/
+
+# Editors
+.DS_Store
+.idea/
+.vscode/
+
