@@ -6,6 +6,10 @@ Make sure `codex` is installed.
 
 `codex "please compile the example slides and generate an overview"`
 
+Now a potential follow-up can be:
+
+`"Make the following slides. Title "Reinforcement Learning and LLMs". Author "Karel D'Oosterlinck". Use current date. Make clear that the goal of the slides is "getting up and running with RL"."`
+
 ## Comming soon (for humans, not for Codex)
 
 - PDF QA tool so Codex can pull information from supporting documents for your slides.
