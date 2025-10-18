@@ -17,7 +17,9 @@ Make sure `codex` is installed.
 - `magick` (ImageMagick 7.1.1-15) — used to render PDF slides to PNG thumbnails and assemble `overview.png`.
 
 ## Commands (for Codex, not for humans)
-Compile slides with `typst compile typslides/version0/main.typ` (watch mode: `typst watch`). Number every release as `typslides/versionN/main.pdf`, keep supporting assets in the same directory, and log changes in `CHANGELOG.md`. Generate thumbnails via `magick -density 200 typslides/version0/main.pdftypslides/version0/thumbs/slide-%02d.png`; render high-resolution slide images with `pdftoppm -png -r 300 typslides/version0/main.pdf typslides/version0/main`; create an overview grid with `montage typslides/version0/thumbs/slide-*.png -tile 5x -geometry +8+8 -background white typslides/version0/overview.png`.
+- `./scripts/release-slides.sh` — create the next `typslides/versionN` directory, compile the PDF, refresh thumbnails, and rebuild the overview image.\
+
+The following are details, only run when `release-slides.sh` does not suffice. Compile slides with `typst compile typslides/version0/main.typ` (watch mode: `typst watch`). Number every release as `typslides/versionN/main.pdf`, keep supporting assets in the same directory, and log changes in `CHANGELOG.md`. Generate thumbnails via `magick -density 200 typslides/version0/main.pdftypslides/version0/thumbs/slide-%02d.png`; render high-resolution slide images with `pdftoppm -png -r 300 typslides/version0/main.pdf typslides/version0/main`; create an overview grid with `montage typslides/version0/thumbs/slide-*.png -tile 5x -geometry +8+8 -background white typslides/version0/overview.png`.
 
 ## Versioning (for Codex, not for humans)
 Track the CHANGELOG, readme, and different *typ versions using Git. Do not track pngs or pdfs, since we can always recompile these.
