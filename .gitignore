@@ -16,10 +16,11 @@ dist/
 # Typst and slides
 *.pdf
 *.png
+!assets/
+!assets/*.png
 typslides/**/thumbs/
 
 # Editors
 .DS_Store
 .idea/
 .vscode/
-

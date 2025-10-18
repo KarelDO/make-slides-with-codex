@@ -10,6 +10,10 @@ Now a potential follow-up can be:
 
 `"Make the following slides. Title "Reinforcement Learning and LLMs". Author "Karel D'Oosterlinck". Use current date. Make clear that the goal of the slides is "getting up and running with RL"."`
 
+And the first slide produced by that command looks like:
+
+![Reinforcement Learning and LLMs title slide](assets/slide-1.png)
+
 ## Comming soon (for humans, not for Codex)
 
 - PDF QA tool so Codex can pull information from supporting documents for your slides.
@@ -26,5 +30,5 @@ Now a potential follow-up can be:
 The following are details, only run when `release-slides.sh` does not suffice. Compile slides with `typst compile typslides/version0/main.typ` (watch mode: `typst watch`). Number every release as `typslides/versionN/main.pdf`, keep supporting assets in the same directory, and log changes in `CHANGELOG.md`. Generate thumbnails via `magick -density 200 typslides/version0/main.pdftypslides/version0/thumbs/slide-%02d.png`; render high-resolution slide images with `pdftoppm -png -r 300 typslides/version0/main.pdf typslides/version0/main`; create an overview grid with `montage typslides/version0/thumbs/slide-*.png -tile 5x -geometry +8+8 -background white typslides/version0/overview.png`.
 
 ## Versioning (for Codex, not for humans)
-Track the CHANGELOG, readme, and different *typ versions using Git. Do not track pngs or pdfs, since we can always recompile these.
+Track the CHANGELOG, readme, and different *typ versions using Git. Do not track pngs or pdfs, since we can always recompile these, except the documented artifact in `assets/slide-1.png`.
 Commit before a compile and tag the CHANGELOG with that commit hash.
